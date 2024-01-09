@@ -1,14 +1,15 @@
 # [FreeCodeCamp]
 
-Hello, welcome to my repository where I save all the learning- & certification project I complete while following the curriculum.
 
-A bit about me. I am aperfectionist and that has hindered me to finish things I have started in the past. Now I understand myself better and will do my best to finish this curriculum and proceed to finish my main goal of completing my portfolio website. I have made other websites in the past but this is the first time I have been so serious about finishing the curriculum and looking for a job oportunity.
+Hello and welcome to my repository, where I store all the learning and certification projects I complete while following the [FreeCodeCamp] curriculum.
 
-I don't own any of the projects that [FreeCodeCamp] provide.
+A little about me: I am a perfectionist, which has hindered me from finishing things I have started in the past. However, I now understand myself better and am committed to completing this curriculum to the best of my abilities and then moving on to achieve my main goal of completing my portfolio website. While I have followed other courses in the past, this is the first time I am so dedicated to finishing the curriculum and seeking a job opportunities.
 
-I am really thankfull for [FreeCodeCamp] and all the donors that made possible for me and countles others to follow this amazing curriculum.
+I am truly thankful for [FreeCodeCamp] and all the donors who have made it possible for me and countless others to follow this amazing curriculum.
 
-I also thankfull for [Bad Website Club], they made an amazing bootcamp. I follow the hosts while they go through the [FreeCodeCamp] curriculum, it give so much more context to things I did not understand initialy. The hosts and comunity are amazing.
+I am also grateful for [Bad Website Club]; they have organized an amazing bootcamp. I follow the hosts as they progress through the [FreeCodeCamp] curriculum, as it provides so much more context to things I did not initially understand. The hosts and the community are truly amazing.
+
+Finally I do not own any of the projects provided by [FreeCodeCamp]. I simply utilize their curriculum to broaden my knowledge of web development. Ultimately, I aim to create my own projects to showcase my skills and seize a job opportunities.
 
 [FreeCodeCamp]: https://www.freecodecamp.org
 [Bad Website Club]: https://badwebsite.club
