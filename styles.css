@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+header {
+    background-color: #2E3248;
+    text-align: center;
+    height: 120px;
+}
+
+h1 {
+    min-width: 670px;
+    color: #fff;
+    padding-top: 30px;
+    font-size: 2.5em;
+}
+
+main {
+    
+    background-color: #E9E2DD;
+}
+
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8px 0 20px;
+}
+
+section:first-child {
+    padding-top: 30px;
+}
+
+section:last-child {
+    padding-bottom: 40px;
+}
+
+h2 {
+    color: black;
+    font-size: 1.9em;
+    padding: 5px 0 10px 20px;
+}
+
+ol {
+    margin-left: 70px;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+a {
+    color: #715DA2;
+    text-decoration: none;
+}
+
+a:hover:not(.coming-soon, .header-more-info) {
+    color: #C54D30;
+    text-decoration: underline;
+}
+
+footer {
+    height: 120px;
+    padding-top: 50px;
+    background-color: #2E3248;
+    color: #fff;
+}
+
+p {
+    margin: 0 auto;
+    padding: 5px 0;
+    max-width: 75%;
+    text-align: center;
+}
+
+.coming-soon {
+    color: grey;
+    font-weight: 500;
+}
+
+.coming-soon:hover {
+   cursor: text;
+}
+
+.coming-soon::after {
+    content: " - (COMING SOON)";
+}
+
+.footer-link-style {
+    color: #C54D30;
+}
+
+.footer-link-style:hover {
+    font-weight: 700;
+    color: #c53a17;
+    text-decoration: none;
+}
+
+.divider {
+    border-bottom: 1px solid #715DA2;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.header-more-info::after {
+    font-size: 0.6em;
+    content: "More";
+    color: #715DA2;
+}
