@@ -1,5 +1,6 @@
 # [FreeCodeCamp]
 
+If you would like to view the project I have created to obtain my certification, you can find them on my [project list page].
 
 Hello and welcome to my repository, where I store all the learning and certification projects I complete while following the [FreeCodeCamp] curriculum.
 
@@ -13,3 +14,4 @@ Finally I do not own any of the projects provided by [FreeCodeCamp]. I simply ut
 
 [FreeCodeCamp]: https://www.freecodecamp.org
 [Bad Website Club]: https://badwebsite.club
+[project list page]: https://eboy-fcc-certification-projects.netlify.app
