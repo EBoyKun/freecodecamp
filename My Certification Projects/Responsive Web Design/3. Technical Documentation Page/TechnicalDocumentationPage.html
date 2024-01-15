@@ -8,31 +8,42 @@
 </head>
 <body>
     <nav id="navbar">
-        <header>Title</header>
-        <ul>
-            <li><a href="#introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#h2" class="nav-link">h2</a></li>
-            <li><a href="#h3" class="nav-link">h3</a></li>
-            <li><a href="#h4" class="nav-link">h4</a></li>
-            <li><a href="#h5" class="nav-link">h5</a></li>
-        </ul>
+        <header>HTML Documentation</header>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#structure_of_an_html_element" class="nav-link">Structure of an HTML element</a>
+        <a href="#h3" class="nav-link">h3</a>
+        <a href="#h4" class="nav-link">h4</a>
+        <a href="#h5" class="nav-link">h5</a>
     </nav>
-    <main id="main-doc">        
+
+    <main id="main-doc">
         <section id="introduction" class="main-section">
             <header>Introduction</header>
-            <p>p1</p>
-            <ul>
-                <li>l1</li>
-                <li>l2</li>
-            </ul>
+            <p>HTML, which stands for HyperText Markup Language, is the code utilized to organize the structure and content of a web page. It is a markup language that establishes the arrangement of your content through a series of elements. These elements are employed to enclose various parts of the content, thereby controlling their appearance or behavior. The enclosing tags can be used to create hyperlinks, italicize text, adjust font size, and more.</p>
         </section>
-        <section id="h2" class="main-section">
-            <header>h2</header>
-            <p>p2</p>
+
+        <section id="structure_of_an_html_element" class="main-section">
+            <header>Structure of an HTML element</header>
+            <ol>
+                <li>
+                    <strong>The opening tag</strong>: It comprises the element's name (in this example, p) enclosed in angle brackets, indicating where the element commences, such as the start of a paragraph.
+                </li>
+                <li>
+                    <strong>The closing tag</strong>: Similar to the opening tag, but preceded by a forward slash before the element name, denotes where the element concludes, such as the end of a paragraph. Omitting a closing tag is a common mistake for beginners and can result in unexpected outcomes.
+                </li>
+                <li>
+                    <strong>The content</strong>: This refers to the actual content of the element, which, in this instance, is plain text.
+                </li>
+                <li>
+                    <strong>The element</strong>: It encompasses the opening tag, the closing tag, and the content, collectively defining the complete element.
+                </li>
+            </ol>
+            <p>Elements may possess attributes, which provide additional information about the element without displaying it in the actual content. For example, in the expression class="editor-note", "class" is the attribute name, and "editor-note" is the attribute value. The class attribute enables you to assign a non-unique identifier to the element, allowing it and other elements with the same class value to be styled and targeted. Additionally, certain attributes, like "required", do not have a specific value.</p>
             <p>p3</p>
             <code>c1</code>
             <p>p4</p>
         </section>
+
         <section id="h3" class="main-section">
             <header>h3</header>
             <p>p5</p>
@@ -44,10 +55,12 @@
             <code>c3</code>
             <p>p6</p>
         </section>
+
         <section id="h4" class="main-section">
             <header>h4</header>
             <p>p7</p>
         </section>
+
         <section id="h5" class="main-section">
             <header>h5</header>
             <p>p8</p>
