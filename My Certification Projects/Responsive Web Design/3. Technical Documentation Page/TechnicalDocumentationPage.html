@@ -11,19 +11,25 @@
         <header>HTML Documentation</header>
         <a href="#introduction" class="nav-link">Introduction</a>
         <a href="#structure_of_an_html_element" class="nav-link">Structure of an HTML element</a>
-        <a href="#h3" class="nav-link">h3</a>
-        <a href="#h4" class="nav-link">h4</a>
-        <a href="#h5" class="nav-link">h5</a>
+        <a href="#structure_of_an_html_document" class="nav-link">Structure of an HTML document</a>
+        <a href="#images" class="nav-link">Images</a>
+        <a href="#marking_up_text" class="nav-link">Marking up text</a>
+        <a href="#links" class="nav-link">Links</a>
+        <a href="#reference" class="nav-link">Reference</a>
     </nav>
 
     <main id="main-doc">
         <section id="introduction" class="main-section">
             <header>Introduction</header>
-            <p>HTML, which stands for HyperText Markup Language, is the code utilized to organize the structure and content of a web page. It is a markup language that establishes the arrangement of your content through a series of elements. These elements are employed to enclose various parts of the content, thereby controlling their appearance or behavior. The enclosing tags can be used to create hyperlinks, italicize text, adjust font size, and more.</p>
+            <div class="main-article">
+                <p>HTML, which stands for HyperText Markup Language, is the code utilized to organize the structure and content of a web page. It is a markup language that establishes the arrangement of your content through a series of elements. These elements are employed to enclose various parts of the content, thereby controlling their appearance or behavior. The enclosing tags can be used to create hyperlinks, italicize text, adjust font size, and more.</p>
+            </div>
         </section>
 
         <section id="structure_of_an_html_element" class="main-section">
             <header>Structure of an HTML element</header>
+            <div class="main-article">
+                <p>The main parts of an HTML element are as follows:</p>
             <ol>
                 <li>
                     <strong>The opening tag</strong>: It comprises the element's name (in this example, p) enclosed in angle brackets, indicating where the element commences, such as the start of a paragraph.
@@ -38,39 +44,125 @@
                     <strong>The element</strong>: It encompasses the opening tag, the closing tag, and the content, collectively defining the complete element.
                 </li>
             </ol>
-            <p>Elements may possess attributes, which provide additional information about the element without displaying it in the actual content. For example, in the expression class="editor-note", "class" is the attribute name, and "editor-note" is the attribute value. The class attribute enables you to assign a non-unique identifier to the element, allowing it and other elements with the same class value to be styled and targeted. Additionally, certain attributes, like "required", do not have a specific value.</p>
-            <p>p3</p>
-            <code>c1</code>
-            <p>p4</p>
+            <p>Elements may possess attributes, which provide additional information about the element without displaying it in the actual content. For example, in the expression <code class="short-code">class="editor-note"</code>, <code class="short-code">class</code> is the attribute name, and <code class="short-code">"editor-note"</code> is the attribute value. The class attribute enables you to assign a non-unique identifier to the element, allowing it and other elements with the same class value to be styled and targeted. Additionally, certain attributes, like <code class="short-code">required</code>, do not have a specific value.</p>
+            <p>Attributes with values always follow these rules:</p>
+            <ol>
+                <li>They are separated from the element name or previous attributes by a space.</li>
+                <li>The attribute name is succeeded by an equal sign.</li>
+                <li>The attribute value is enclosed in opening and closing quotation marks.</li>
+            </ol>
+
+            <h3>Nesting elements</h3>
+            <p>You can nest elements within other elements. For instance, to emphasize that our cat is very grumpy, we can enclose the word "very" in a <code class="short-code">strong</code> element to indicate emphasis.</p>
+            <code> &lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt; </code>
+            <p>You must ensure that your elements are correctly nested. In the given example, we opened the <code class="short-code">&lt;p&gt;</code> element before the <code class="short-code">&lt;strong&gt;</code> element, so we need to close the <code class="short-code">&lt;strong&gt;</code> element before the <code class="short-code">&lt;p&gt;</code> element. The following is incorrect:</p>
+            <code class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+            <p>The elements must open and close correctly to indicate whether they are nested within or outside each other.</p>
+
+            <h3>Void elements</h3>
+            <p>Some elements have no content and are known as void elements, such as the <code class="short-code">&lt;img&gt;</code> element in our HTML page:</p>
+            <code>&lt;img src="images/firefox-icon.png" alt="My test image" /&gt;</code>
+            <p>This includes two attributes, but it lacks a closing <code class="short-code">&lt;/img&gt;</code> tag and inner content. This is because an image element does not wrap content to affect it; its purpose is to embed an image in the HTML page at the location it appears.</p>
+            </div>
         </section>
 
-        <section id="h3" class="main-section">
-            <header>h3</header>
-            <p>p5</p>
+        <section id="structure_of_an_html_document" class="main-section">
+            <header>Structure of an HTML document</header>
+            <div class="main-article">
+                <p>The structure of HTML elements covers the basics of individual HTML elements, but they are not useful on their own. Now we'll explore how individual elements are combined to create a complete HTML page. Example HTML page below:</p>
+            <code>&lt;!doctype html&gt;<br>
+    &Tab;&lt;html lang="en-US"&gt;<br>
+    &Tab;&lt;head&gt;<br>
+    &Tab;&Tab;&lt;meta charset="utf-8" /&gt;<br>
+    &Tab;&Tab;&lt;meta name="viewport" content="width=device-width" /&gt;<br>
+    &Tab;&Tab;&lt;title>My test page&lt;/title&gt;<br>
+    &Tab;&lt;/head&gt;<br>
+    &Tab;&lt;body&gt;<br>
+    &Tab;&Tab;&lt;img src="images/firefox-icon.png" alt="My test image" /&gt;<br>
+    &Tab;&lt;/body&gt;<br>
+    &lt;/html&gt;</code>
+            <p>Here, we have the following:</p>
             <ul>
-                <li>l3</li>
-                <li>l4</li>
+                <li>
+                    <code class="short-code">&lt;!DOCTYPE html&gt;</code> - <code class="short-code">doctype</code>. It is a required preamble. In the mists of time, when HTML was young, doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+                </li>
+                <li>
+                    <code class="short-code">&lt;html&gt;&lt;/html&gt;</code> - the <code class="short-code">&lt;html&gt;</code> element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, setting the primary language of the document.
+                </li>
+                <li>
+                    <code class="short-code">&lt;head&gt;&lt;/head&gt;</code> - the <code class="short-code">&lt;head&gt;</code> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+                </li>
+                <li>
+                    <code class="short-code">&lt;meta charset="utf-8"&gt;</code> - This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
+                </li>
+                <li>
+                    <code class="short-code">&lt;meta name="viewport" content="width=device-width"&gt;</code> - This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
+                </li>
+                <li>
+                    <code class="short-code">&lt;title&gt;&lt;/title&gt;</code> - the <code class="short-code">&lt;title&gt;</code> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+                </li>
+                <li>
+                    <code class="short-code">&lt;body&gt;&lt;/body&gt;</code> - the <code class="short-code">&lt;body&gt;</code> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+                </li>
             </ul>
-            <code>c2</code>
-            <code>c3</code>
-            <p>p6</p>
+            </div>
         </section>
 
-        <section id="h4" class="main-section">
-            <header>h4</header>
-            <p>p7</p>
+        <section id="images" class="main-section">
+            <header>Images</header>
+            <div class="main-article">
+                <p>Let's turn our attention to the <code class="short-code">&lt;img&gt;</code> element again:</p>
+            <code>&lt;img src="images/firefox-icon.png" alt="My test image" /&gt;</code>
+            <p>As we said before, it embeds an image into our page in the position it appears. It does this via the <code class="short-code">src</code> (source) attribute, which contains the path to our image file.</p>
+            <p>We have also included an <code class="short-code">alt</code> (alternative) attribute. In the <code class="short-code">alt</code> attribute, you specify descriptive text for users who cannot see the image, possibly because of the following reasons:</p>
+            <ol>
+                <li>They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.</li>
+                <li>Something has gone wrong causing the image not to display.</li>
+            </ol>
+            <p>The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys.</p>
+            </div>
         </section>
 
-        <section id="h5" class="main-section">
-            <header>h5</header>
-            <p>p8</p>
-            <code>c4</code>
-            <p>p9</p>
-            <ul>
-                <li>l5</li>
-            </ul>
-            <p>p10</p>
-            <code>c5</code>
+        <section id="marking_up_text" class="main-section">
+            <header>Marking up text</header>
+            <div class="main-article">
+                <p>This section will cover some essential HTML elements you'll use for marking up the text.</p>
+
+            <h3>Headings</h3>
+            <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, <code class="short-code">&lt;h1&gt; - &lt;h6&gt;</code>, although you'll commonly only use 3 to 4 at most:</p>
+            <pre><code>&lt;!-- 4 heading levels: --&gt;
+&lt;h1&gt;My main title&lt;/h1&gt;
+&lt;h2&gt;My top level heading&lt;/h2&gt;
+&lt;h3&gt;My subheading&lt;/h3&gt;
+&lt;h4&gt;My sub-subheading&lt;/h4&gt;</code></pre>
+
+            <h3>Paragraphs</h3>
+            <p>As explained above, <p> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:</p>
+            <code><p>This is a single paragraph</p></code>
+            <p>Add your sample text (you should have it from What will your website look like?) into one or a few paragraphs, placed directly below your <img> element.</p>
+
+            <h3>Lists</h3>
+            <p>A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:</p>
+            <ol>
+                <li>Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a <code class="short-code">&lt;ul&gt;</code> element.</li>
+                <li>Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an <code class="short-code">&lt;ol&gt;</code> element.</li>
+            </ol>
+            <p>Each item inside the lists is put inside an <code class="short-code">&lt;li&gt;</code> (list item) element.</p>
+            </div>
+        </section>
+
+        <section id="links" class="main-section">
+            <header>Links</header>
+            <div class="main-article">
+                <p>Links are very important - they are what makes the web a web! To add a link, we need to use a simple element - <code class="short-code">&lt;a&gt;</code> - "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:</p>
+            </div>
+        </section>
+
+        <section id="reference" class="main-section">
+            <header>Reference</header>
+            <div class="main-article">
+                <p>All the information on this page has been taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#headings">MDN - HTML Basics</a></p>
+            </div>
         </section>
     </main>
 </body>
