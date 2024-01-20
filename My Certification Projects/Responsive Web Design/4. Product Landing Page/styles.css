@@ -60,13 +60,14 @@ body {
 }
 #get-started h2{
     font-size: 25px;
+    text-align: center;
 }
 #form {
     display: flex;
     flex-direction: column;
 }
 #email {
-    width: 400px;
+    min-width: 400px;
     font-size: 20px;
     padding: 5px;
     margin: 20px 0;
@@ -113,7 +114,7 @@ body {
     justify-content: center;
 }
 #video {
-    width: 560px;
+    max-width: 560px;
     height: 315px; 
     margin: 20px;
 }
@@ -221,5 +222,22 @@ body {
         margin: 10px 0;
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 550px) {
+    #header {
+        height: 200px;
+    }
+    #header ul li{
+        display: block;
+        margin: 10px;
+        text-align: center;
+    }
+    #main-content {
+        top: 200px;
+    }
+    #get-started h2{
+        margin: 0 10px;
     }
 }
