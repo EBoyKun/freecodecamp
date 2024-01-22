@@ -1,3 +1,12 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-dark-blue: #2E3248;
+    --color-beige: #E9E2DD;
+    --color-orange: #C54D30;
+    --color-purple: #715DA2;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
 * {
@@ -14,20 +23,19 @@ body{
 }
 
 header {
-    background-color: #2E3248;
+    background-color: var(--color-dark-blue);
     text-align: center;
     min-height: 120px;
 }
 
 h1 {
-    color: #fff;
+    color: var(--color-white);
     padding: 30px 0;
     font-size: 2.5em;
 }
 
-main {
-    
-    background-color: #E9E2DD;
+main {    
+    background-color: var(--color-beige);
 }
 
 section {
@@ -55,10 +63,11 @@ ol {
     margin-left: 70px;
     font-size: 1.3em;
     font-weight: 700;
+    color: var(--color-purple);
 }
 
 a {
-    color: #715DA2;
+    color: var(--color-purple);
     text-decoration: none;
 }
 
@@ -68,8 +77,11 @@ a:hover:not(.coming-soon, .header-more-info) {
 }
 
 footer {
-    height: 120px;
-    padding-top: 50px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
     background-color: #2E3248;
     color: #fff;
 }
@@ -98,7 +110,7 @@ p {
     color: #C54D30;
 }
 
-.footer-link-style:hover {
+.footerlink-style:hover {
     font-weight: 700;
     color: #c53a17;
     text-decoration: none;
