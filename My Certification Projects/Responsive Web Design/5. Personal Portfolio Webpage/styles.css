@@ -1,0 +1,190 @@
+:root {
+    --background: #111111;    
+    --font: #f9f9f9;
+    --border: #303030;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font);
+}
+
+section:not(section:last-child) {
+    border-bottom: 2px solid var(--border);
+}
+
+/* NAVEGATION */
+#navbar {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    padding-left: 20px;    
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.75);
+}
+
+#navbar a {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--font);
+    height: 60px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar a:hover {
+    box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.75);
+    text-decoration: line-through var(--font);
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+    background-color: var(--background);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome-section h1{
+    font-size: 80px;
+}
+#welcome-section h2{
+    font-size: 28px;
+    font-style: italic;
+}
+#welcome-section a{
+    animation: rainbow 15s linear infinite;
+    text-decoration: none;
+}
+#welcome-section a:hover{
+    text-decoration: line-through 2px var(--background);
+}
+
+/* PROJECT SECTION */
+#projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 70px 0 60px;
+}
+#projects h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#projects-holder {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-tile {    
+    width: 400px;
+    height: 450px;
+    border: 1px solid var(--border);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.125);
+}
+.project-title{
+    width: 100%;
+    height: 40px;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.125);
+}
+.project-tumbnail {
+    width: 100%;
+    height: calc(100% - 40px);
+}
+.project-tumbnail img {
+    width: inherit;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+/* SOCIAL LINKS */
+#socials {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: var(--background);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#socials h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#socials a {
+    animation: rainbow 15s linear infinite;
+    font-size: 25px;
+    text-decoration: none;
+}
+#socials a:hover {
+    text-decoration: line-through var(--background);
+}
+
+/* FOOTER */
+footer {
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    box-shadow: 0 -1px 5px rgba(255, 255, 255, 0.75);
+}
+
+/* MEDIA QUERIES */
+@media (min-width:1678px) {
+    #projects {
+        padding: 100px 0 0;
+    }
+}
+
+@media (max-width: 834px) {
+    #welcome-section h1{
+        font-size: 56px;
+    }
+    #welcome-section h2{
+        font-size: 20px;
+        font-style: italic;
+    }
+}
+
+@keyframes rainbow {
+    0% { color: #ff001e; }
+    16%{ color: #ff9500; }
+    33%{ color: #c1c400; }
+    49%{ color: #098f09; }
+    66%{ color: #0059ff; }
+    82%{ color: #8a2be2; }
+    100%{ color: #ff001e; }
+}
