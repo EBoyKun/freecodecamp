@@ -15,7 +15,7 @@ section:not(section:last-child) {
     border-bottom: 2px solid var(--border);
 }
 
-/* NAVEGATION */
+/* NAVIGATION */
 #navbar {
     position: fixed;
     z-index: 20;
